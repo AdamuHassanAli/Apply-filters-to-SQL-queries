@@ -6,9 +6,14 @@ My organization is working to make their system more secure. It is my job to ens
 There was a potential security incident that occurred after business hours (after 18:00). All after hours login attempts that failed need to be investigated.
 The following code demonstrates how I created a SQL query to filter for failed login attempts that occurred after business hours.<br>
 
-**Sreenshot 1**
-
-The first part of the screenshot is my query, and the second part is a portion of the output. This query filters for failed login attempts that occurred after 18:00. First, I started by selecting all data from the `log_in_attempts` table. Then, I used a ` WHERE` clause with an `AND` operator to filter my results to output only login attempts that occurred after 18:00 and were unsuccessful. The first condition is `login_time > '18:00'`, which filters for the login attempts that occurred after 18:00. The second condition is `success = FALSE`, which filters for the failed login attempts. 
+<p align="center">
+<b>Screenshot 1 :</b> <br>
+The first part of the screenshot 1 is my query, and the second part is a portion of the output. This query filters for failed login attempts that occurred after 18:00.<br>
+<img src="https://github.com/AdamuHassanAli/Apply-filters-to-SQL-queries/blob/311681f5dd77742c0562374ce382bc5b8b341808/Images/1-1.png"/><br>
+First, I started by selecting all data from the `log_in_attempts` table.<br>
+<img src="https://github.com/AdamuHassanAli/Apply-filters-to-SQL-queries/blob/311681f5dd77742c0562374ce382bc5b8b341808/Images/1-2.png"/><br>
+Then, I used a ` WHERE` clause with an `AND` operator to filter my results to output only login attempts that occurred after 18:00 and were unsuccessful. The first condition is `login_time > '18:00'`, which filters for the login attempts that occurred after 18:00. The second condition is `success = FALSE`, which filters for the failed login attempts. 
+<img src="https://github.com/AdamuHassanAli/Apply-filters-to-SQL-queries/blob/311681f5dd77742c0562374ce382bc5b8b341808/Images/1-3.png"/><br>
 
 ## Retrieve login attempts on specific dates
 A suspicious event occurred on 2022-05-09. Any login activity that happened on 2022-05-09 or on the day before needs to be investigated.
