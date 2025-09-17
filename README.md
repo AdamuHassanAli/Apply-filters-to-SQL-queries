@@ -1,4 +1,4 @@
-# Apply-filters-to-SQL-queries
+# Applied SQL Filters for Security Investigation and System Hardening
 **Platform:** Google Cybersecurity Courses On Coursera | **Type:** Practical Scenario with Hands-On Lab  
 
 ## Project description
