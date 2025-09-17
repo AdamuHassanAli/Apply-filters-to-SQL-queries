@@ -24,11 +24,7 @@ Then, I used a ` WHERE` clause with an `AND` operator to filter my results to ou
 A suspicious event occurred on 2022-05-09. Any login activity that happened on 2022-05-09 or on the day before needs to be investigated.
 The following code demonstrates how I created a SQL query to filter for login attempts that occurred on specific dates.
 
-The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all login attempts that occurred on 2022-05-09 or 2022-05-08.
-
-<p align="center"><img src="Images/2-1.png" /></p>
-
-First, I started by selecting all data from the `log_in_attempts` table. 
+The following query returns all login attempts that occurred on 2022-05-09 or 2022-05-08. First, I started by selecting all data from the `log_in_attempts` table. 
 
 <p align="center"><img src="Images/2-2.png" /></p> 
 
@@ -37,17 +33,22 @@ Then, I used a `WHERE` clause with an `OR` operator to filter my results to outp
 <p align="center"><img src="Images/2-3.png" /></p>
 
 ## Retrieve login attempts outside of Mexico
+After investigating the organization’s data on login attempts, I believe there is an issue with the login attempts that occurred outside of Mexico. These login attempts should be investigated.
+The following code demonstrates how I created a SQL query to filter for login attempts that occurred outside of Mexico. 
 
+The following query returns all login attempts that occurred in countries other than Mexico. First, I started by selecting all data from the `log_in_attempts` table. 
+
+<p align="center"><img src="Images/3-2.png" /></p>
+
+Then, I used a `WHERE` clause with `NOT` to filter for countries other than Mexico. I used `LIKE` with `MEX%` as the pattern to match because the dataset represents Mexico as `MEX` and `MEXICO`. The percentage sign `(%)` represents any number of unspecified characters when used with `LIKE`.
+
+<p align="center"><img src="Images/3-3.png" /></p>
 
 ## Retrieve employees in Marketing
 My team wants to update the computers for certain employees in the Marketing department. To do this, I have to get information on which employee machines to update.
 The following code demonstrates how I created a SQL query to filter for employee machines from employees in the Marketing department in the East building.
 
-The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all employees in the Marketing department in the East building. 
-
-<p align="center"><img src="Images/4-1.png" /></p>
-
-First, I started by selecting all data from the `employees` table.
+The following query returns all employees in the Marketing department in the East building. First, I started by selecting all data from the `employees` table.
 
 <p align="center"><img src="Images/4-2.png" /></p>
 
@@ -59,11 +60,7 @@ Then, I used a `WHERE` clause with `AND` to filter for employees who work in the
 The machines for employees in the Finance and Sales departments also need to be updated. Since a different security update is needed, I have to get information on employees only from these two departments.
 The following code demonstrates how I created a SQL query to filter for employee machines from employees in the Finance or Sales departments.
 
-The first part of the screenshot is my query, and the second part is a portion of the output. This query returns all employees in the Finance and Sales departments.
-
-<p align="center"><img src="Images/5-1.png" /></p>
-
-First, I started by selecting all data from the `employees` table. 
+The following query returns all employees in the Finance and Sales departments. First, I started by selecting all data from the `employees` table. 
 
 <p align="center"><img src="Images/5-2.png" /></p>
 
@@ -75,7 +72,7 @@ Then, I used a `WHERE` clause with `OR` to filter for employees who are in the *
 My team needs to make one more security update on employees who are not in the Information Technology department. To make the update, I first have to get information on these employees.
 The following demonstrates how I created a SQL query to filter for employee machines from employees not in the  Information Technology department.
 
-The first part of the screenshot is my query, and the second part is a portion of the output. The query returns all employees not in the Information Technology department. First, I started by selecting all data from the `employees` table. Then, I used a `WHERE` clause with `NOT` to filter for employees not in this department.
+The following query returns all employees not in the Information Technology department. First, I started by selecting all data from the `employees` table. Then, I used a `WHERE` clause with `NOT` to filter for employees not in this department.
 
 <p align="center"><img src="Images/6-3.png" /></p>
 
